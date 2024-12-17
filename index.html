@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger-meny</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: none;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 10px 0;
+    }
+
+    .hamburger {
+      width: 40px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .hamburger.active {
+      transform: rotate(90deg);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Hamburger ikon" class="hamburger" id="hamburgerIcon">
+
+ <!-- Navigasjonsmeny -->
+  <nav id="navMenu">
+    <ul>
+      <li>Hjem</li>
+      <li>Om oss</li>
+      <li>Kontakt</li>
+    </ul>
+  </nav>
+
+
+  <p>
+    <a href="https://www.flaticon.com/free-icons/ui" title="ui icons" target="_blank">
+     </a>
+  </p>
+
+  <script>
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburgerIcon.addEventListener('click', () => {
+      hamburgerIcon.classList.toggle('active');
+navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
+
+<!-- Ui icons created by onatthapato - Flaticon -->
